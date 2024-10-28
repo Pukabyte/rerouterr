@@ -89,26 +89,7 @@ You can utilise the docker compose file
 ```bash
 docker compose up
 ```
-
-### 1. Pull the Docker Image
-Pull the Docker image from my repo
-```bash
-
-docker pull leojay/rerouterr:latest
-```
-
-### 2. Run the application
-If you manually built:
-```bash
-docker run -p 7777:7777 -v /path/to/host/config:/config rerouterr
-```
-
-If you didn't:
-If you manually built:
-```bash
-docker run -p 7777:7777 -v /path/to/host/config:/config leojay/rerouterr:latest
-```
-Make sure that you place your config.yaml file where the /config volume location is, and setup the Webhook appropriately in Overseerr.
+Make sure that you setup the Webhook appropriately in Overseerr.
 
 ## Webhook Setup in Overseerr
 

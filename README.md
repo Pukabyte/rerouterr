@@ -27,6 +27,8 @@ Each rule is divided into `match` and `apply` sections:
 - `genres`: List of genres that the rule applies to. Optional.
 - `exclude_keywords`: Keywords to exclude. If a request contains any of these keywords, it will not match this rule. Optional.
 - `include_keywords`: Keywords that must be included for a request to match this rule. Optional.
+- `content_ratings`: List of ratings that the rule applies to. Optional.
+- `original_language`: Original language the rule applies to. Optional.
 
 #### Apply Section
 - `root_folder`: The directory where the media should be stored if the rule is applied. Required.
@@ -82,12 +84,10 @@ rules:
 
 To setup the Rerouter Docker, follow these steps:
 
-### 0. Manually build the repo (optional):
-Manually build the repo if you don't want to pull from the docker hub.
+### Docker compose
+You can utilise the docker compose file
 ```bash
-git clone https://github.com/ASolidBPlus/Rerouter/
-cd <cloned repo folder>
-docker build -t rerouterr.
+docker compose up
 ```
 
 ### 1. Pull the Docker Image

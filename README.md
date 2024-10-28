@@ -119,25 +119,58 @@ To enable Rerouterr to handle requests, you need to set up a webhook in Overseer
 3. **Add a new webhook** with the following settings:
    - **URL**: `http://<server-ip>:7777/webhook` (replace `<server-ip>` with the IP address of the server where Rerouterr is running).
    - **JSON Payload**:
-     ```json
-     {
-         "notification_type": "{{notification_type}}",
-         "media": {
-             "media_type": "{{media_type}}",
-             "tmdbId": "{{media_tmdbid}}",
-             "tvdbId": "{{media_tvdbid}}",
-             "status": "{{media_status}}",
-             "status4k": "{{media_status4k}}"
-         },
-         "request": {
-             "request_id": "{{request_id}}",
-             "requestedBy_email": "{{requestedBy_email}}",
-             "requestedBy_username": "{{requestedBy_username}}",
-             "requestedBy_avatar": "{{requestedBy_avatar}}"
-         },
-         "{{extra}}": []
-     }
-     ```
+```json
+{
+    "notification_type": "{{notification_type}}",
+    "media": {
+        "media_type": "{{media_type}}",
+        "tmdbId": "{{media_tmdbid}}",
+        "tvdbId": "{{media_tvdbid}}",
+        "status": "{{media_status}}",
+        "status4k": "{{media_status4k}}",
+        "genres": [
+            {
+                "id": "{{genre_id}}",
+                "name": "{{genre_name}}"
+            }
+        ],
+        "keywords": [
+            {
+                "id": "{{keyword_id}}",
+                "name": "{{keyword_name}}"
+            }
+        ],
+        "original_language": "{{original_language}}",
+        "contentRatings": {
+            "results": [
+                {
+                    "iso_3166_1": "{{rating_country}}",
+                    "rating": "{{rating_value}}"
+                }
+            ]
+        },
+        "releases": {
+            "results": [
+                {
+                    "iso_3166_1": "{{rating_country}}",
+                    "release_dates": [
+                        {
+                            "certification": "{{rating_value}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "request": {
+        "request_id": "{{request_id}}",
+        "requestedBy_email": "{{requestedBy_email}}",
+        "requestedBy_username": "{{requestedBy_username}}",
+        "requestedBy_avatar": "{{requestedBy_avatar}}"
+    },
+    "{{extra}}": []
+}
+```
    - **Notification Type**: Choose "Request Pending Approval".
 
 ### Important Note

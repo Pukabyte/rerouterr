@@ -1,3 +1,4 @@
+  GNU nano 7.2                                                                                            docker-compose.yml                                                                                                      
 version: "3"
 services:
   rerouterr:
@@ -5,6 +6,8 @@ services:
     container_name: rerouterr
     build: .
 #    image: leojay/rerouterr:latest
+    networks:
+      - saltbox
     hostname: rerouterr
     ports:
       - "7777:7777"
@@ -13,5 +16,8 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes: 
-      - path/to/Rerouterr:/config # change me
+      - /opt/rerouterr:/config # change me
       - /etc/localtime:/etc/localtime:ro
+networks:
+  saltbox:
+    external: true

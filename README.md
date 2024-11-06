@@ -131,7 +131,7 @@ To enable Rerouterr to handle requests, you need to set up a webhook in Overseer
 1. **Navigate to Settings in Overseerr**.
 2. **Go to Notifications and select Webhooks**.
 3. **Add a new webhook** with the following settings:
-   - **URL**: `http://<server-ip>:7777/webhook` (replace `<server-ip>` with the IP address of the server where Rerouterr is running).
+   - **URL**: `http://rerouterr:7777/webhook` (replace `<server-ip>` with the IP address of the server where Rerouterr is running).
    - **JSON Payload**:
 ```json
 {

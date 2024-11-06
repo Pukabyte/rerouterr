@@ -42,43 +42,76 @@ Each rule is divided into `match` and `apply` sections:
 The application matches requests against these rules from top to bottom. The first rule that matches a request will be applied. It is important to order your rules wisely to ensure that the most specific rules are evaluated first.
 
 ### Example Configuration
-
-```yaml
-overseerr_baseurl: "http://<overseerr ip/domain>:<overseerr port>"
-overseerr_api_key: "<api-key>"
+```yml
+overseerr_baseurl: "http://overseerr:5055"
+overseerr_api_key: "MTczMDc4NzkxODA4MWY0NzkyMDk0LTk4NGUtNDYzNy05YjJiLTAzMDQwMzY4ZWExNA=="
 rules:
   - media_type: "tv"
     match:
       genres:
         - "Animation"
-      exclude_keywords:
-        - "anime"
+      original_language: "ja"
     apply:
-      root_folder: "/data/media/tv/cartoon"
+      root_folder: "/mnt/plex/TV - Anime"
       server_id: 1
-      quality_profile_id: 8
-      approve: false
+      approve: true
   - media_type: "tv"
     match:
       genres:
         - "Animation"
-      include_keywords:
-        - "anime"
+        - "Kids"
+        - "Family"
+      content_ratings:
+        - rating: "TV-Y"
+        - rating: "TV-Y7"
+        - rating: "TV-Y7-FV"
+        - rating: "TV-G"
+        - rating: "TV-PG"
     apply:
-      root_folder: "/data/media/tv/anime"
-      server_id: 1
-      quality_profile_id: 7
-      approve: false
+      root_folder: "/mnt/plex/TV - Kids"
+      server_id: 0
+      approve: true
   - media_type: "tv"
+    match: {}
     apply:
-      root_folder: "/data/media/tv/general"
+      root_folder: "/mnt/plex/TV"
       server_id: 0
-      approve: false
+      approve: true
   - media_type: "movie"
+    match:
+      genres:
+        - "Animation"
+        - "Family"
+      content_ratings:
+        - rating: "G"
+        - rating: "PG"
+        - rating: "TV-G"
+        - rating: "TV-PG"
     apply:
-      root_folder: "/data/media/movies/general"
+      root_folder: "/mnt/plex/Movies - Family"
       server_id: 0
-      approve: false
+      approve: true
+  - media_type: "movie"
+    match:
+      genres:
+        - "Animation"
+      original_language: "ja"
+    apply:
+      root_folder: "/mnt/plex/Movies - Anime"
+      server_id: 1
+      approve: true
+  - media_type: "movie"
+    match: {}
+    apply:
+      root_folder: "/mnt/plex/Movies"
+      server_id: 0
+      approve: true
+  - media_type: "music"
+    match: {}
+    apply:
+      root_folder: "/mnt/plex/Music"
+      server_id: 0
+      approve: true
 ```
 # Docker setup
 

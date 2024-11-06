@@ -44,7 +44,7 @@ The application matches requests against these rules from top to bottom. The fir
 ### Example Configuration
 ```yml
 overseerr_baseurl: "http://overseerr:5055"
-overseerr_api_key: "MTczMDc4NzkxODA4MWY0NzkyMDk0LTk4NGUtNDYzNy05YjJiLTAzMDQwMzY4ZWExNA=="
+overseerr_api_key: "api_key=="
 rules:
   - media_type: "tv"
     match:

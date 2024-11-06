@@ -7,7 +7,7 @@ rules:
         - "Animation"
       original_language: "ja"
     apply:
-      root_folder: "/mnt/plex/Anime"
+      root_folder: "/mnt/plex/TV - Anime"
       server_id: 1
       approve: true
   - media_type: "tv"
@@ -43,13 +43,7 @@ rules:
         - rating: "TV-G"
         - rating: "TV-PG"
     apply:
-      root_folder: "/mnt/plex/Movies - Kids"
-      server_id: 0
-      approve: true
-  - media_type: "movie"
-    match: {}
-    apply:
-      root_folder: "/mnt/plex/Movies"
+      root_folder: "/mnt/plex/Movies - Family"
       server_id: 0
       approve: true
   - media_type: "movie"
@@ -58,8 +52,14 @@ rules:
         - "Animation"
       original_language: "ja"
     apply:
-      root_folder: "/mnt/plex/Anime - Movies"
+      root_folder: "/mnt/plex/Movies - Anime"
       server_id: 1
+      approve: true
+  - media_type: "movie"
+    match: {}
+    apply:
+      root_folder: "/mnt/plex/Movies"
+      server_id: 0
       approve: true
   - media_type: "music"
     match: {}

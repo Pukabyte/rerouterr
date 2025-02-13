@@ -88,7 +88,7 @@ rules:
         - rating: "TV-G"
         - rating: "TV-PG"
     apply:
-      root_folder: "/mnt/plex/Movies - Family"
+      root_folder: "/mnt/plex/Movies - Kids"
       server_id: 0
       approve: true
   - media_type: "movie"

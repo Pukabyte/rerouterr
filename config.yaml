@@ -5,6 +5,8 @@ rules:
     match:
       genres:
         - "Animation"
+      include_keywords:
+        - "anime"
       original_language: "ja"
     apply:
       root_folder: "/mnt/plex/TV - Anime"
@@ -36,6 +38,17 @@ rules:
     match:
       genres:
         - "Animation"
+      include_keywords:
+        - "anime"
+      original_language: "ja"
+    apply:
+      root_folder: "/mnt/plex/Movies - Anime"
+      server_id: 1
+      approve: true
+  - media_type: "movie"
+    match:
+      genres:
+        - "Animation"
         - "Family"
       content_ratings:
         - rating: "G"
@@ -45,15 +58,6 @@ rules:
     apply:
       root_folder: "/mnt/plex/Movies - Kids"
       server_id: 0
-      approve: true
-  - media_type: "movie"
-    match:
-      genres:
-        - "Animation"
-      original_language: "ja"
-    apply:
-      root_folder: "/mnt/plex/Movies - Anime"
-      server_id: 1
       approve: true
   - media_type: "movie"
     match: {}

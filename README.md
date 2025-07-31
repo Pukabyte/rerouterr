@@ -80,7 +80,7 @@ rules:
     match:
       genres:
         - "Animation"
-      ikeywords:
+      keywords:
         - "anime"
       original_language: "ja"
     apply:

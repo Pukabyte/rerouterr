@@ -60,7 +60,7 @@ rules:
         - "Animation"
         - "Kids"
         - "Family"
-      content_ratings:
+      certification:
         - "TV-Y"
         - "TV-Y7"
         - "TV-Y7-FV"
@@ -94,7 +94,7 @@ rules:
         - "Family"
         - "Kids"
         - "Children"
-      content_ratings:
+      certification:
         - "G"
         - "PG"
         - "TV-G"

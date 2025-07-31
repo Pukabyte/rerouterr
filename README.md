@@ -48,9 +48,8 @@ overseerr_api_key: "api_key=="
 rules:
   - media_type: "tv"
     match:
-      genres:
-        - "Animation"
-      original_language: "ja"
+      keywords:
+        - "anime"
     apply:
       root_folder: "/mnt/plex/TV - Anime"
       server_id: 1
@@ -62,11 +61,11 @@ rules:
         - "Kids"
         - "Family"
       content_ratings:
-        - rating: "TV-Y"
-        - rating: "TV-Y7"
-        - rating: "TV-Y7-FV"
-        - rating: "TV-G"
-        - rating: "TV-PG"
+        - "TV-Y"
+        - "TV-Y7"
+        - "TV-Y7-FV"
+        - "TV-G"
+        - "TV-PG"
     apply:
       root_folder: "/mnt/plex/TV - Kids"
       server_id: 0
@@ -83,10 +82,10 @@ rules:
         - "Animation"
         - "Family"
       content_ratings:
-        - rating: "G"
-        - rating: "PG"
-        - rating: "TV-G"
-        - rating: "TV-PG"
+        - "G"
+        - "PG"
+        - "TV-G"
+        - "TV-PG"
     apply:
       root_folder: "/mnt/plex/Movies - Kids"
       server_id: 0

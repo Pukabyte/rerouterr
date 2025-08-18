@@ -48,7 +48,7 @@ overseerr_api_key: "api_key"
 rules:
   - media_type: "tv"
     match:
-      keywords:
+      include_keywords:
         - "anime"
     apply:
       root_folder: "/mnt/plex/TV - Anime"
@@ -80,7 +80,7 @@ rules:
     match:
       genres:
         - "Animation"
-      keywords:
+      include_keywords:
         - "anime"
       original_language: "ja"
     apply:
